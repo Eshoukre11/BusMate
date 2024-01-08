@@ -1,5 +1,8 @@
 <?php
 
+use App\Models\User;
+use App\Models\universitie;
+
 return [
 
     /*
@@ -40,6 +43,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'university' => [
+            'driver' => 'session',
+            'provider' => 'universities',
+        ],
     ],
 
     /*
@@ -62,7 +69,11 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+            'model' => User::class,
+        ],
+        'universities' => [
+            'driver' => 'eloquent',
+            'model' => universitie::class,
         ],
 
         // 'users' => [
@@ -93,6 +104,12 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_reset_tokens',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'universities' => [
+            'provider' => 'universitie',
             'table' => 'password_reset_tokens',
             'expire' => 60,
             'throttle' => 60,
