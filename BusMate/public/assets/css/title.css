@@ -1,0 +1,16 @@
+.title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.title::before {
+    content: '';
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/fontawesome-free-6.5.1-web/css/all.min.css">
+    <title>dashboard </title>
+    <script>
+        function show_hide() {
+            const elements = document.getElementsByName('navbar');
+            for (var i = 0; i < elements.length; i++) {
+                if (elements[i].style.opacity == '1') {
+                    elements[i].style.opacity = '0'
+                }
+                else {
+                    elements[i].style.opacity = '1'
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="menu">
+        <ul>
+            <li class="profile">
+                <h2>khaled</h2>
+            </li>
+            <li>
+                <a id="dashboard" href="#" class="active">
+                    <i class="fas fa-home "></i>
+                    <p>dashboard</p>
+                </a>
+            </li>
+            <li>
+                <a id="add1" href="#">
+                    <i class="fas fa-train-subway"></i>
+                    <p>show bus</p>
+                </a>
+            </li>
+            <li>
+                <a id="add3" href="#">
+                    <i class="fas fa-users"></i>
+                    <p>show drivers</p>
+                </a>
+            </li>
+            <li>
+                <a id="add4" href="#">
+                    <i class="fas fa-star"></i>
+                    <p>show trips</p>
+                </a>
+            </li>
+            <li class="log-out">
+                <form action="">
+                    <button type="submit">
+                        <i class="fas fa-sign-out"></i>
+                        <p>log out</p>
+                    </button>
+                </form>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="data-info">
+            <div class="box">
+                <i class="fas fa-train-subway"></i>
+                <div class="data">
+                    <p>Bus</p>
+                    <span>100</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-users"></i>
+                <div class="data">
+                    <p>drivers</p>
+                    <span>30</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-star"></i>
+                <div class="data">
+                    <p>trips</p>
+                    <span>15</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

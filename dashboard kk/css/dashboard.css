@@ -1,0 +1,318 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+body {
+  background-color: rgb(0, 0, 1);
+  display: flex;
+}
+
+.img-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgb(102, 85, 85);
+  flex-shrink: 0;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile h2 {
+  font-size: 15px;
+  text-transform: capitalize;
+}
+
+.menu {
+  background-color: rgb(12, 12, 41);
+  width: 65px;
+  height: 94vh;
+  padding: 10px;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.menu:hover {
+  width: 250px;
+}
+
+ul {
+  list-style: none;
+  position: relative;
+  height: 95%;
+}
+
+ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  transition: .5s;
+}
+
+ul li button {
+  display: block;
+  text-decoration: none;
+  padding: 8px;
+  margin: 10px 0;
+  border-radius: 8px;
+  gap: 40px;
+  transition: .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+ul li button i {
+  font-size: 30px;
+}
+
+ul li button p {
+  font-size: 24px;
+  display: none;
+  opacity: 0;
+}
+
+ul:hover li button p {
+  display: flex;
+  opacity: 1;
+}
+
+ul li a:hover,
+.active,
+.data-info .box:hover {
+  background-color: rgb(99, 90, 90);
+}
+
+.log-out {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.log-out a {
+  background-color: rgb(122, 13, 13);
+}
+
+.log-out button {
+  background-color: rgb(122, 13, 13);
+}
+
+ul li a i {
+  font-size: 34px;
+}
+
+.content {
+
+  width: 100%;
+  margin: 10px;
+}
+
+.title-info {
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  margin: 15px 0;
+  width: 97%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.data-info {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.data-info .box {
+  background-color: rgb(12, 12, 41);
+  height: 150px;
+  flex-basis: 150px;
+  flex-grow: 1;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.data-info .box i {
+  font-size: 40px;
+}
+
+.data-info .box .data {
+  text-align: center;
+}
+
+.data-info .box .data span {
+  font-size: 25px;
+}
+
+
+.container {
+  margin-top: 50px;
+  background-color: slateblue;
+  color: w;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  /* Add padding to the container */
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+h1,
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+th {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+.active {
+  background-color: #ccc;
+}
+
+.delete {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#search-users {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+/* تنسيقات إضافية لجعل الصفحة تبدو أكثر حداثة */
+
+.header-logo {
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+
+.header-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.captains-table {
+  margin-top: 20px;
+}
+
+.users-table {
+  margin-top: 20px;
+}
+
+.search-input {
+  border-radius: 5px;
+}
+
+.delete-button {
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+td {
+  text-align: center;
+}
+
+#search-users,
+#search-captain {
+  width: calc(100% - 10px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* تأكد من أن عرض حقل البحث يتناسب مع عرض الجدول */
+.users-table table,
+.captains-table table {
+  width: 100%;
+}
+
+tr:hover {
+  background-color: silver;
+  color: black;
+}
+
+iframe {
+  display: none;
+}
+
+a:active,
+a:focus {
+  background-color: #2a2a2a;
+
+}
+
+.hidden_items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 25% 25% 25%;
+  justify-content: space-between;
+}
+
+.navbar_items {
+  border: 1px solid #2a2a2a;
+  padding: 8px;
+  border-radius: 8px;
+  transition: 1s ease-in-out;
+  width: fit-content;
+}
+
+.navbar_items:hover {
+  background-color: #2a2a2a;
+  -webkit-box-shadow: 10px 10px 22px -1px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: 10px 10px 22px -1px rgba(0, 0, 0, 0.67);
+  box-shadow: 10px 10px 22px -1px rgba(0, 0, 0, 0.67);
+}
